@@ -1,6 +1,9 @@
 package com.anil.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
@@ -21,10 +24,13 @@ public class ProfilePage {
         driver.findElement(viewProfile).click();
     }
     public void navigateToProfile() throws InterruptedException {
-        Thread.sleep(3000); // wait after login
-        driver.findElement(profileIcon).click();
+
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+wait.until(ExpectedConditions.visibilityOfElementLocated(profileIcon)).click();
         Thread.sleep(2000);
-        driver.findElement(viewProfile).click();
+
+wait.until(ExpectedConditions.elementToBeClickable(viewProfile)).click();
     }
 
 public void uploadResume(String filePath) throws InterruptedException {
