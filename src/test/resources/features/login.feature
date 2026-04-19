@@ -1,4 +1,4 @@
-Feature: Job Profile Automation
+Feature: NaukriDailyUpdate
 
   Scenario: Login and Upload Resume
     Given user launches the browser
