@@ -39,7 +39,7 @@ public void uploadResume(String filePath) throws InterruptedException {
 
     ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)");
 
-    driver.findElement(uploadResume).sendKeys(filePath);
+    driver.findElement().sendKeys(filePath);
     Thread.sleep(7000);
 }
 }
