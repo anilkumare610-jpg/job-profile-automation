@@ -43,7 +43,7 @@ public class LoginSteps {
     public void user_navigates_and_uploads_resume() throws InterruptedException {
         profilePage.navigateToProfile();
 
-        String path = "F:\\anil_Resume\\Resumes\\New\\Anil Kumar-Resume.pdf"; // change this
+        String path = "F:\\anil_Resume\\Resumes\\New\\Resume_Anil.pdf"; // change this
         profilePage.uploadResume(path);
     }
 
